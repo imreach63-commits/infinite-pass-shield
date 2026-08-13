@@ -1,4 +1,4 @@
-name: Build Android APK
+name: Build APK Package
 on: [push]
 
 jobs:
@@ -7,20 +7,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Java JDK
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'zulu'
-          java-version: '17'
-
-      - name: Build Web App APK
+      - name: Create Zip Package
         run: |
-          npm install -g @gonative/cli || true
-          mkdir -p output
-          zip -r output/website.zip index.html
+          mkdir -p build
+          cp index.html build/
+          cd build && zip -r ../PassShieldApp.zip *
 
-      - name: Upload APK Artifact
+      - name: Upload App Package
         uses: actions/upload-artifact@v3
         with:
-          name: App-Files-Ready
-          path: index.html
+          name: PassShield-Web-APK-Package
+          path: PassShieldApp.zip
