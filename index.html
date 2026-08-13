@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFINITE PASS-SHIELD AI</title>
+    <!-- Tailwind CSS for Zero-Brain UI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .trigger-word { background-color: #fef08a; color: #854d0e; font-weight: bold; padding: 2px 6px; border-radius: 4px; border: 1px dashed #ca8a04; }
+        .keyword-highlight { text-decoration: underline; text-decoration-color: #2563eb; font-weight: bold; color: #1e40af; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans min-h-screen pb-16">
 
+    <!-- Top Navigation Bar -->
+    <header class="bg-indigo-700 p-4 sticky top-0 z-50 shadow-md flex justify-between items-center">
+        <h1 class="text-xl font-black tracking-wider text-amber-300">🛡️ PASS-SHIELD AI</h1>
+        <button id="premiumToggle" onclick="toggleFreemium()" class="bg-amber-400 text-slate-900 px-3 py-1 rounded-full text-xs font-bold shadow hover:bg-amber-300">
+            👑 Go Premium (Ad-Free)
+        </button>
+    </header>
+
+    <!-- Main App Container -->
+    <main class="p-4 max-w-xl mx-auto space-y-6">
+
+        <!-- Banner Ad Section -->
+        <div id="bannerAd" class="bg-slate-800 border border-slate-700 p-2 text-center text-xs text-slate-400 rounded-lg">
+            📢 [ADVERTISEMENT] SSC & Railway Mock Pass @ 80% OFF - Tap to View
+        </div>
+
+        <!-- Mode Selection Tabs -->
+        <div class="grid grid-cols-3 gap-2">
+            <button onclick="switchMode('pattern')" class="bg-indigo-600 hover:bg-indigo-500 py-3 rounded-lg text-xs font-bold text-center shadow">🎯 Pattern Match</button>
+            <button onclick="switchMode('levels')" class="bg-slate-800 hover:bg-slate-700 py-3 rounded-lg text-xs font-bold text-center shadow">📊 3-Level Engine</button>
+            <button onclick="switchMode('locator')" class="bg-slate-800 hover:bg-slate-700 py-3 rounded-lg text-xs font-bold text-center shadow">📍 Center & OMR</button>
+        </div>
+
+        <!-- 1. Visual Pattern Matching Engine -->
+        <section id="patternEngine" class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow-lg space-y-4">
+            <div class="flex justify-between items-center border-b border-slate-700 pb-2">
+                <h2 class="text-sm font-bold text-indigo-400">⚡ Visual Pattern Matching Engine</h2>
+                <span class="text-xs bg-indigo-950 text-indigo-300 px-2 py-0.5 rounded border border-indigo-800">Auto-Triggers</span>
+            </div>
+
+            <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 space-y-2">
+                <p class="text-xs text-slate-400 font-semibold">Question Pattern #104:</p>
+                <p class="text-sm leading-relaxed">
+                    जब किसी परिपथ में <span class="trigger-word">धारा (Current)</span> दोगुनी कर दी जाती है, तो उत्पन्न <span class="trigger-word">ऊष्मा (Heat)</span> पर क्या प्रभाव पड़ेगा?
+                </p>
+            </div>
+
+            <!-- Trigger Matching Answer UI -->
+            <div class="bg-emerald-950/60 border border-emerald-800/80 p-3 rounded-lg space-y-1">
+                <p class="text-xs text-emerald-400 font-bold">🎯 Master Trigger Rule:</p>
+                <p class="text-xs text-emerald-200">यदि प्रश्न में <span class="underline font-bold">धारा & ऊष्मा</span> दिखे ➔ उत्तर हमेशा <span class="bg-emerald-500 text-slate-950 font-black px-1 rounded">4 गुना (Quadrupled)</span> चुनें।</p>
+            </div>
+
+            <!-- 3-Line Written Exam Template -->
+            <div class="bg-slate-900 p-3 rounded-lg text-xs space-y-1 border border-slate-700">
+                <p class="font-bold text-amber-400">📝 3-Line Written Exam Template:</p>
+                <p>• <span class="text-slate-400">Trigger Word:</span> धारा और प्रतिरोध संबंध</p>
+                <p>• <span class="text-slate-400">Examiner Keywords:</span> <span class="keyword-highlight">Joule's Law ($H = I^2Rt$)</span>, <span class="keyword-highlight">Square Proportion</span></p>
+                <p>• <span class="text-slate-400">Conclusion:</span> ऊष्मा 4 गुना बढ़ेगी।</p>
+            </div>
+
+            <!-- Rewarded Ad Trigger for Card Unlock -->
+            <button onclick="triggerRewardedAd()" class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 text-xs font-black py-2.5 rounded-lg shadow hover:opacity-90">
+                🎬 Watch 15s Ad to Unlock Next 10 Pattern Cards
+            </button>
+        </section>
+
+        <!-- 2. 3-Level Micro-Learning Engine -->
+        <section id="levelEngine" class="hidden bg-slate-800 border border-slate-700 rounded-xl p-4 shadow-lg space-y-3">
+            <h2 class="text-sm font-bold text-indigo-400 border-b border-slate-700 pb-2">📊 3-Level Micro-Learning Shield</h2>
+            
+            <div class="space-y-2 text-xs">
+                <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 flex justify-between items-center">
+                    <div>
+                        <p class="font-bold text-emerald-400">Level 1: Passing Shield (20% Imp. Content)</p>
+                        <p class="text-slate-400 text-[10px]">60% मार्क्स पक्के करें (कट-ऑफ सुरक्षा)</p>
+                    </div>
+                    <span class="bg-emerald-500/20 text-emerald-300 font-bold px-2 py-1 rounded">Unlocked</span>
+                </div>
+
+                <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 flex justify-between items-center">
+                    <div>
+                        <p class="font-bold text-blue-400">Level 2: Merit Booster (75%+ Marks)</p>
+                        <p class="text-slate-400 text-[10px]">रैंक सुधारने के लिए सबसे सटीक प्रश्न</p>
+                    </div>
+                    <span class="bg-blue-500/20 text-blue-300 font-bold px-2 py-1 rounded">Unlocked</span>
+                </div>
+
+                <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 flex justify-between items-center">
+                    <div>
+                        <p class="font-bold text-amber-400">Level 3: Selection Zone (Final Job Shield)</p>
+                        <p class="text-slate-400 text-[10px]">Cut-off + 15% सेफ़्टी बफ़र जोन</p>
+                    </div>
+                    <span class="bg-slate-800 text-slate-500 font-bold px-2 py-1 rounded border border-slate-700">Locked</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Center Locator & OMR Simulator -->
+        <section id="locatorEngine" class="hidden bg-slate-800 border border-slate-700 rounded-xl p-4 shadow-lg space-y-4">
+            <h2 class="text-sm font-bold text-indigo-400 border-b border-slate-700 pb-2">📍 Live Exam Center Locator & OMR Simulator</h2>
+            
+            <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 space-y-2 text-xs">
+                <p class="font-bold text-amber-300">🗺️ Exam Travel Locator (GPS Route):</p>
+                <p class="text-slate-300">सेंटर: <span class="font-semibold text-white">iON Digital Zone, Sector 62, Noida</span></p>
+                <p class="text-slate-400">दूरी: 14.2 km | अनुमानित समय: 35 mins (Traffic Normal)</p>
+                <button onclick="alert('परीक्षा समय से 2 घंटे पहले का अलार्म सेट कर दिया गया है!')" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-1.5 px-3 rounded text-[11px]">
+                    ⏰ Auto-Set 2-Hour Departure Alarm
+                </button>
+            </div>
+
+            <!-- OMR Simulator -->
+            <div class="bg-slate-900 p-3 rounded-lg border border-slate-700 space-y-2">
+                <p class="text-xs font-bold text-emerald-400">⭕ Interactive OMR Simulator (Practice):</p>
+                <div class="flex items-center space-x-3 text-xs">
+                    <span class="font-bold">Q.1</span>
+                    <button onclick="fillOMR(this)" class="w-6 h-6 rounded-full border border-slate-500 hover:bg-indigo-600 flex items-center justify-center">A</button>
+                    <button onclick="fillOMR(this)" class="w-6 h-6 rounded-full border border-slate-500 hover:bg-indigo-600 flex items-center justify-center">B</button>
+                    <button onclick="fillOMR(this)" class="w-6 h-6 rounded-full border border-slate-500 hover:bg-indigo-600 flex items-center justify-center">C</button>
+                    <button onclick="fillOMR(this)" class="w-6 h-6 rounded-full border border-slate-500 hover:bg-indigo-600 flex items-center justify-center">D</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- App Logic JavaScript -->
+    <script>
+        function switchMode(mode) {
+            document.getElementById('patternEngine').classList.add('hidden');
+            document.getElementById('levelEngine').classList.add('hidden');
+            document.getElementById('locatorEngine').classList.add('hidden');
+
+            if(mode === 'pattern') document.getElementById('patternEngine').classList.remove('hidden');
+            if(mode === 'levels') document.getElementById('levelEngine').classList.remove('hidden');
+            if(mode === 'locator') document.getElementById('locatorEngine').classList.remove('hidden');
+        }
+
+        function triggerRewardedAd() {
+            alert("📺 [REWARDED AD] 15-Second Video Playing...\n\nबधाई हो! 10 नए Trigger Pattern Cards अनलॉक हो चुके हैं।");
+        }
+
+        function toggleFreemium() {
+            const banner = document.getElementById('bannerAd');
+            if (banner.style.display === 'none') {
+                banner.style.display = 'block';
+                alert("Freemium Mode Active (Ad-supported)");
+            } else {
+                banner.style.display = 'none';
+                alert("👑 Premium Pass Active! All Ads Removed.");
+            }
+        }
+
+        function fillOMR(el) {
+            const parent = el.parentElement;
+            const buttons = parent.querySelectorAll('button');
+            buttons.forEach(btn => btn.classList.remove('bg-indigo-600', 'text-white'));
+            el.classList.add('bg-indigo-600', 'text-white');
+        }
+    </script>
+</body>
+</html>
